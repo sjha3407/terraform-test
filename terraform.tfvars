@@ -33,12 +33,12 @@ vnics = {
 }
 
 main_vm = {
-    vm1 = {
-  name                  = "main_vm"
-  resource_group_name   = "rg_vm"
-  location              = "central india"
-  network_interface_ids = ["vnic1"]
- 
-}
+  vm1 = {
+    name                  = "main_vm"
+    resource_group_name   = "rg_vm"
+    location              = "central india"
+    network_interface_ids = ["vnic1"]
+
+  }
 
 }

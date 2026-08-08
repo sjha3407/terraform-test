@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "rg_vm" {
   for_each = var.rgs
-  name = each.value.name
+  name     = each.value.name
   location = each.value.location
 }
 
@@ -14,7 +14,7 @@ resource "azurerm_virtual_network" "vnets" {
 }
 
 resource "azurerm_subnet" "vsubnet" {
-  depends_on          = [azurerm_virtual_network.vnets]
+  depends_on           = [azurerm_virtual_network.vnets]
   for_each             = var.vsubnets
   name                 = each.value.name
   resource_group_name  = each.value.resource_group_name
