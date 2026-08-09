@@ -1,6 +1,10 @@
 name: Terraform Azure CI
 
 on:
+
+  push:
+    branches:
+      - terraform-cicd
   push:
     branches:
       - main
