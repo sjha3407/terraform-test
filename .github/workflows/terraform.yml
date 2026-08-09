@@ -1,12 +1,9 @@
 name: Terraform Azure CI
 
 on:
-
   push:
     branches:
       - terraform-cicd
-  push:
-    branches:
       - main
 
   pull_request:
@@ -18,13 +15,10 @@ permissions:
   contents: read
 
 jobs:
-
   terraform-ci:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -36,7 +30,7 @@ jobs:
         with:
           client-id: "40148f2c-788d-4498-8cca-34b134ef4ee8"
           tenant-id: "a859ae35-14ed-4da2-88b7-e9b8165a67fa"
-          subscription-id: "e82eae71-c563-484d-912c-a20b08bd744c" 
+          subscription-id: "e82eae71-c563-484d-912c-a20b08bd744c"
 
       - name: Terraform Format
         run: terraform fmt -check
